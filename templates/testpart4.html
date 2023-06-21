@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Hackathon</title>
+
+    <style>
+        
+
+        /* Style the button */
+        button {
+            padding: 20px 40px;
+            font-size: 18px;
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .bottombutton{
+            text-align: center;
+            position: absolute;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .centered {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        /* Center align the text */
+        .center {
+            text-align: center;
+        }
+
+        /* Increase the text size */
+        .larger {
+            font-size: 24px;
+        }
+
+        .container {
+  position: relative;
+  height: 300px; 
+}
+
+.bottom-button {
+  position: absolute;
+  bottom: 0;
+}
+
+
+        </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <a class="navbar-brand" href="{{ url_for('homepage')}}">Salesforce Inturn Hackathon</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+            </ul>
+        </div>
+    </nav>
+
+        {{html_output | safe}}
+    <br>
+    <div class="center larger">Accuracy score is {{score}}</div>
+
+    <!-- <p>{{second_it}}</p> -->
+    <!-- <div class="centered">
+        <a href = "{{ url_for('newneuralnet')}}"><button type="button">Click to know more about performance of neural network</button></a>
+
+    </div> -->
+
+    <div class="container">
+        <a href="{{ url_for('newlgb')}}"><button class="bottom-button">Remove few features and check more about the model</button></a>
+      </div>
+      
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    <!-- <script>
+        var modifiedValues = JSON.parse('{{ values|safe }}');
+        
+        // Find the element containing the array
+        var arrayElement = document.querySelector("#top_divK3D013WD0587Q7R .lime.predict_proba svg script").nextSibling;
+        
+        // Replace the original array with the modified values
+        arrayElement.textContent = JSON.stringify(modifiedValues);
+      </script> -->
+      
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
+
+
