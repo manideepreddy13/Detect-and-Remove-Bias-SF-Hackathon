@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>Hackathon</title>
+    <title>Neural Network</title>
 
     <style>
         
@@ -17,11 +17,21 @@
         button {
             padding: 20px 40px;
             font-size: 18px;
-            background-color: blue;
+            background-color: green;
             color: white;
             border: none;
             border-radius: 10px;
             cursor: pointer;
+        }
+
+        body {
+            background-color: lightyellow;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .navbar-brand{
+            font-size: 30px;
         }
 
         .bottombutton{
@@ -52,11 +62,13 @@
 
         .container {
   position: relative;
-  height: 300px; 
+  height: 125px; 
 }
 
 .bottom-button {
   position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   bottom: 0;
 }
 
@@ -64,8 +76,8 @@
         </style>
   </head>
   <body>
-    <nav class="navbar navbar-expand-md navbar-light bg-light">
-        <a class="navbar-brand" href="{{ url_for('homepage')}}">Salesforce Inturn Hackathon</a>
+    <nav class="navbar navbar-expand-md navbar-light bg-lightyellow">
+        <a class="navbar-brand" href="{{ url_for('homepage')}}">Bias Remover</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -75,15 +87,17 @@
         </div>
     </nav>
 
+    <div class="intro-container">
+      <h2 class="center">Neural Network</h4>
+  </div>
+
+      <br>
+      <br>
         {{html_output | safe}}
     <br>
     <div class="center larger">Accuracy score is {{score}}</div>
 
-    <!-- <p>{{second_it}}</p> -->
-    <!-- <div class="centered">
-        <a href = "{{ url_for('newneuralnet')}}"><button type="button">Click to know more about performance of neural network</button></a>
 
-    </div> -->
 
     <div class="container">
         <a href="{{ url_for('newneuralnet')}}"><button class="bottom-button">Remove few features and check more about the model</button></a>

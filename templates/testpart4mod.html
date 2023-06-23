@@ -8,12 +8,25 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>Hackathon</title>
+    <title>Light GBM after removing a few features</title>
 
     <style>
         
 
         /* Style the button */
+
+        body {
+            background-color: lightyellow;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+
+        .navbar-brand{
+            font-size: 40px;
+        }
+
+
         button {
             padding: 20px 40px;
             font-size: 18px;
@@ -50,6 +63,11 @@
             font-size: 24px;
         }
 
+        .bold {
+  font-weight: bold;
+}
+
+
         .container {
   position: relative;
   height: 300px; 
@@ -73,8 +91,8 @@
         </style>
   </head>
   <body>
-    <nav class="navbar navbar-expand-md navbar-light bg-light">
-        <a class="navbar-brand" href="{{ url_for('homepage')}}">Salesforce Inturn Hackathon</a>
+    <nav class="navbar navbar-expand-md navbar-light bg-lightyellow">
+        <a class="navbar-brand" href="{{ url_for('homepage')}}">Bias Remover</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -87,14 +105,23 @@
       
 
     <div class="intro-container">
+        <h2 class="center">Light GBM</h4>
+
         <p>After removing a few features such as {% for item in dp %}
         {{ item }}{% if not loop.last %},{% endif %}
           {% endfor %} and train the model again, we get this.</p>
     </div>
 
-        {{html_output | safe}}
+  
+    {{html_output | safe}}
+
+
+        
     <br>
     <div class="center larger">Accuracy score is {{score}}</div>
+
+    <br>
+    <div class="center larger">{{txt}}</div>
 
     <!-- <p>{{second_it}}</p> -->
     <!-- <div class="centered">

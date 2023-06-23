@@ -37,7 +37,7 @@
         button {
             padding: 20px 40px;
             font-size: 18px;
-            background-color: blue;
+            background-color: green;
             color: white;
             border: none;
             border-radius: 10px;
@@ -54,48 +54,32 @@
         </style>
   </head>
   <body>
-    <nav class="navbar navbar-expand-md navbar-light bg-light">
-        <a class="navbar-brand" href="{{ url_for('homepage')}}">Salesforce Inturn Hackathon</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-            </ul>
-        </div>
-    </nav>
 
 
 
     <div class="intro-container">
-        <h2>Vision of this Site</h1>
-        <h5>In this site, we try to explore more about each model and their bias associated with it. Our aim is to reduce the bias associated with the model by recommending steps to achieve that.</p>
+        <h2>Our Vision</h1>
+        <h5>In this site, we try to explore more about each model and their bias associated with it. Our aim is to provide an explanation of the model and find ways that we can try to reduce the bias associated with the model.</p>
     </div>
+
     <div class="centered">
         <!-- <a href = "{{ url_for('neuralnetwork')}}"><button type="button">Click to know more about performance of neural network</button></a> -->
-        <a href="{{ url_for('neuralnetwork') }}"><button type="button">Click to know more about the performance of the neural network</button></a>
 
-<a href="{{ url_for('randomforest') }}"><button type="button">Click to know more about the performance of the random forest classifier</button></a>
+        <br><br><br><br><a href="{{ url_for('randomforest') }}"><button type="button">Click to know more about the performance of the random forest classifier</button></a>
 
-<a href="{{ url_for('xgb') }}"><button type="button">Click to know more about the performance of xg boost</button></a>
+        <br><br><a href="{{ url_for('neuralnetwork') }}"><button type="button">Click to know more about the performance of the neural network</button></a>
 
 
-    </div>
+        <br><br><a href="{{ url_for('xgbmodel') }}"><button type="button">Click to know more about the performance of xg boost</button></a>
 
-    <!-- <div class="centered">
-        <a href = "{{ url_for('randomforest')}}"><button type="button">Click to know more about performance of random forest classifier</button></a>
+        <br><br><a href="{{ url_for('lgbmodel') }}"><button type="button">Click to know more about the performance of light gbm</button></a>
 
-    </div>
 
-    <div class="centered">
-        <a href = "{{ url_for('xgb')}}"><button type="button">Click to know more about performance of xg boost</button></a>
+
 
     </div>
 
-    <div class="centered">
-        <a href = "{{ url_for('lgb')}}"><button type="button">Click to know more about performance of light gbm</button></a>
-
-    </div> -->
+    
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
